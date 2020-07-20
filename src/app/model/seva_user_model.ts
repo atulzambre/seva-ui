@@ -6,6 +6,7 @@ export class SevaUserModel {
   suEmail: String;
   suName: String;
   suPassword: String;
+  suConfirmPassword: String;
   suPhone: number;
   sevaUserRoles: SevaUserRoleModel[];
 }

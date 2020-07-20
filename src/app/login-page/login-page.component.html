@@ -2,14 +2,9 @@
   _ngcontent-twh-c40=""
   class="mat-card mat-focus-indicator"
   style="
-    top: 50%;
-    left: 50%;
-    padding: 15px;
     position: absolute;
-    top: 50%;
     left: 50%;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translate(-50%, -50%);
+    top: 50%;
     transform: translate(-50%, -50%);
   "
 >
@@ -18,19 +13,19 @@
     <form>
       <mat-form-field>
         <mat-label>Email</mat-label>
-        <input matInput />
+        <input matInput [(ngModel)]="sevaUser.suEmail" name="email" />
       </mat-form-field>
     </form>
     <form>
       <mat-form-field>
         <mat-label>Password</mat-label>
-        <input matInput />
+        <input matInput [(ngModel)]="sevaUser.suPassword" name="password" />
       </mat-form-field>
     </form>
   </mat-card-content>
 
   <mat-card-actions>
-    <button mat-raised-button color="primary" (click)="gotoHomePage()">
+    <button mat-raised-button color="primary" (click)="loginUser(sevaUser)">
       Sign In
     </button>
     <button mat-raised-button color="primary" (click)="gotoRegisterPage()">

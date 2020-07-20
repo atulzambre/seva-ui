@@ -2,14 +2,9 @@
   _ngcontent-twh-c40=""
   class="mat-card mat-focus-indicator"
   style="
-    top: 50%;
-    left: 50%;
-    padding: 15px;
     position: absolute;
-    top: 50%;
     left: 50%;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translate(-50%, -50%);
+    top: 50%;
     transform: translate(-50%, -50%);
   "
 >
@@ -18,31 +13,51 @@
     <form>
       <mat-form-field>
         <mat-label>Full Name</mat-label>
-        <input matInput />
+        <input matInput [(ngModel)]="sevaUserModel.suName" name="fullname" />
       </mat-form-field>
     </form>
     <form>
       <mat-form-field>
         <mat-label>Mobile No.</mat-label>
-        <input matInput />
+        <input
+          matInput
+          type="number"
+          [(ngModel)]="sevaUserModel.suPhone"
+          name="phoneno"
+        />
       </mat-form-field>
     </form>
     <form>
       <mat-form-field>
         <mat-label>Email</mat-label>
-        <input matInput />
+        <input
+          matInput
+          type="email"
+          [(ngModel)]="sevaUserModel.suEmail"
+          name="email"
+        />
       </mat-form-field>
     </form>
     <form>
       <mat-form-field>
         <mat-label>Password</mat-label>
-        <input matInput />
+        <input
+          type="password"
+          matInput
+          [(ngModel)]="sevaUserModel.suPassword"
+          name="password"
+        />
       </mat-form-field>
     </form>
     <form>
       <mat-form-field>
         <mat-label>Confirm Password</mat-label>
-        <input matInput />
+        <input
+          type="password"
+          matInput
+          [(ngModel)]="sevaUserModel.suConfirmPassword"
+          name="confirmpassword"
+        />
       </mat-form-field>
     </form>
   </mat-card-content>
@@ -51,6 +66,12 @@
     <button mat-raised-button color="primary" (click)="gotoSignInPage()">
       Sign In
     </button>
-    <button mat-raised-button color="primary">Register</button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="registerUser(sevaUserModel)"
+    >
+      Register
+    </button>
   </mat-card-actions>
 </mat-card>

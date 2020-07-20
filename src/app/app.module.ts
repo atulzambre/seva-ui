@@ -12,6 +12,7 @@ import { MatListModule } from "@angular/material/list";
 import { MatIconModule } from "@angular/material/icon";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { LoginPageComponent } from "./login-page/login-page.component";
 import { HeaderComponent } from "./header/header.component";
 import { RouterModule } from "@angular/router";
@@ -19,6 +20,9 @@ import { RegisterPageComponent } from "./register-page/register-page.component";
 import { HomePageComponent } from "./home-page/home-page.component";
 import { SearchFilterPageComponent } from "./search-filter-page/search-filter-page.component";
 import { PaginationPageComponent } from "./pagination-page/pagination-page.component";
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+import { VerifyAccountPageComponent } from "./verify-account-page/verify-account-page.component";
 
 @NgModule({
   declarations: [
@@ -29,6 +33,7 @@ import { PaginationPageComponent } from "./pagination-page/pagination-page.compo
     HomePageComponent,
     SearchFilterPageComponent,
     PaginationPageComponent,
+    VerifyAccountPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,10 @@ import { PaginationPageComponent } from "./pagination-page/pagination-page.compo
     MatIconModule,
     MatGridListModule,
     MatPaginatorModule,
+    MatProgressSpinnerModule,
     RouterModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
