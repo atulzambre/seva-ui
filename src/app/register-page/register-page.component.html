@@ -13,8 +13,20 @@
     transform: translate(-50%, -50%);
   "
 >
-  <mat-card-title>Login</mat-card-title>
+  <mat-card-title>Register</mat-card-title>
   <mat-card-content>
+    <form>
+      <mat-form-field>
+        <mat-label>Full Name</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </form>
+    <form>
+      <mat-form-field>
+        <mat-label>Mobile No.</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </form>
     <form>
       <mat-form-field>
         <mat-label>Email</mat-label>
@@ -27,14 +39,18 @@
         <input matInput />
       </mat-form-field>
     </form>
+    <form>
+      <mat-form-field>
+        <mat-label>Confirm Password</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </form>
   </mat-card-content>
 
   <mat-card-actions>
-    <button mat-raised-button color="primary" (click)="gotoHomePage()">
+    <button mat-raised-button color="primary" (click)="gotoSignInPage()">
       Sign In
     </button>
-    <button mat-raised-button color="primary" (click)="gotoRegisterPage()">
-      Register
-    </button>
+    <button mat-raised-button color="primary">Register</button>
   </mat-card-actions>
 </mat-card>
